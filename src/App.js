@@ -3,13 +3,14 @@ import "./App.css";
 import Display from "./components/Display";
 import Header from "./components/Header";
 import TextArea from "./components/TextArea";
-import Footer from "./Footer";
+import Footer from "./components/Footer";
 
 function App() {
+  // let note = "";
   return (
     <>
-      <Header/>
-      <TextArea/>
+      <Header title = "My Notes"/>
+      <TextArea value = ""/>
       <Display/>
       <Footer/>
     </>

@@ -1,11 +1,11 @@
 import React from 'react'
 
-export default function Header() {
+export default function Header({title}) {
     return (
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
         <div className="container-fluid">
           <a className="navbar-brand" href="#">
-            NOTES
+            {title}
           </a>
           <button
             className="navbar-toggler"
