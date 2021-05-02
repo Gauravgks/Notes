@@ -1,18 +1,21 @@
 //import logo from './logo.svg';
-import "./App.css";
+import React, {useState} from "react";
 import Display from "./components/Display";
 import Header from "./components/Header";
 import TextArea from "./components/TextArea";
 import Footer from "./components/Footer";
 
 function App() {
-  // let note = "";
+
+  const [newnote, addnote] = useState([
+
+  ]);
   return (
     <>
-      <Header title = "My Notes"/>
-      <TextArea value = ""/>
-      <Display/>
-      <Footer/>
+      <Header title="My Notes" />
+      <TextArea />
+      <Display />
+      <Footer />
     </>
   );
 }

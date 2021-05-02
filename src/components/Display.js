@@ -4,7 +4,8 @@ export default function Display() {
     return (
         // * Can use bootstrap accordian in this section 
         <div>
-            Display area
+            
+            {/* {notes} */}
         </div>
     )
 }

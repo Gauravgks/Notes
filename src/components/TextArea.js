@@ -1,24 +1,39 @@
-import React from "react";
+import React, { useState } from "react";
+import "../App.css";
+import "../App.js";
+import Display from "./Display";
 
-export default function TextArea({value}) {
+export default function TextArea() {
+  const [title, desc] = useState("");
+
   return (
-    <div className="Container">
-        <h3>{value}</h3>
-      <div class="input-group mb-3" >
+    <div classNameName="Container">
+      <div className="mb-3 ">
+        <label HTMLFor="heading" className="form-label">
+          Heading
+        </label>
         <input
           type="text"
-          class="form-control"
-          placeholder="Input Notes"
-          aria-label="note value"
+          className="form-control"
+          id="heading"
+          placeholder="Heading"
+          value={title}
         />
-        <button
-          class="btn btn-outline-secondary"
-          type="button"
-          id="add note"
-        >
-          ADD NOTE
-        </button>
       </div>
+      <div className="mb-3">
+        <label HTMLFor="description" className="form-label">
+          Description
+        </label>
+        <textarea
+          className="form-control"
+          id="description"
+          rows="3"
+          value={desc}
+        ></textarea>
+      </div>
+      <button type="submit" className="btn btn-success">
+        Add Note
+      </button>
     </div>
   );
 }
