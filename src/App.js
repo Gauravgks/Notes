@@ -7,17 +7,42 @@ import Footer from "./components/Footer";
 
 function App() {
 
-  const [newnote, addnote] = useState([
+  const onDelete = (note)=>{
+    setNotes(notes.filter((e)=>{
+        return e!==note;
+    }))
+  }
 
+  const addNote = (title, desc)=>{
+    const myNote = {
+      title:title,
+      desc:desc,
+    }
+    console.log(myNote);
+    setNotes([...notes, myNote]);
+  }
+
+  const[notes, setNotes] =useState([ 
+    // {
+    // title: "shopping",
+    // desc:"Buy cloths"
+    // },
+    // {
+    // title: "Study",
+    // desc: "Read some books",
+    // }
   ]);
+  
   return (
     <>
       <Header title="My Notes" />
-      <TextArea />
-      <Display />
+      <TextArea addNote = {addNote}/>
+      <Display notes = {notes} onDelete={onDelete}/>
       <Footer />
     </>
   );
 }
 
 export default App;
+
+

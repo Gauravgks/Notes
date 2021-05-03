@@ -8,7 +8,7 @@
 }
 
 .Container{
-  padding: 60px;
+  padding: 20px;
 }
 
 .btn-outline-secondary{
@@ -17,3 +17,10 @@
 
 
 
+.displayitem{
+  padding: 30px;
+}
+
+.display{
+  padding: 20px;
+}
