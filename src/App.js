@@ -18,7 +18,6 @@ function App() {
       title:title,
       desc:desc,
     }
-    console.log(myNote);
     setNotes([...notes, myNote]);
   }
 
