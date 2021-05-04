@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import "../App.css";
 import "../App.js";
-import Display from "./Display";
 
 export default function TextArea(props) {
   const [title, setTitle] = useState("");
@@ -10,9 +9,13 @@ export default function TextArea(props) {
   const submit = (e) =>{
       e.preventDefault();
       if(!title || !desc){
-        alert("Input some Value")
+        alert("Insert Title or Description");
       }
+      else{
       props.addNote(title,desc);
+      setTitle("");
+      setDesc("");
+      }
   }
 
   return (
@@ -23,19 +26,19 @@ export default function TextArea(props) {
             Heading
           </label>
           <input type="text" className="form-control" id="heading" placeholder="Heading"
-            onChange = {(e)=>{setTitle(e.target.value)}} value={title} />
+            onChange = {(e) => {setTitle(e.target.value)}} value={title} />
         </div>
         <div className="mb-3">
           <label htmlFor="description" className="form-label">
             Description
           </label>
           <textarea className="form-control" id="description" rows="3"
-            onChange = {(e)=>{setDesc(e.target.value)}} value={desc}></textarea>
+            onChange = {(e) => {setDesc(e.target.value)}} value={desc}></textarea>
         </div>
         <button type="submit" className="btn btn-success">
           Add Note
         </button>
-        </form>
+      </form>
     </div>
   );
 }

@@ -7,12 +7,13 @@ import Footer from "./components/Footer";
 
 function App() {
 
+  // * Delete Notes from from Display area
   const onDelete = (note)=>{
     setNotes(notes.filter((e)=>{
         return e!==note;
     }))
   }
-
+  // * Adding notes inserted from texterea into usestate 
   const addNote = (title, desc)=>{
     const myNote = {
       title:title,
@@ -20,7 +21,7 @@ function App() {
     }
     setNotes([...notes, myNote]);
   }
-
+  // * usestate for transfering notes to displayarea
   const[notes, setNotes] =useState([ 
     // {
     // title: "shopping",
